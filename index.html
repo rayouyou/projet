@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BATYR-COMMERCE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="css/main-style.css">
+</head>
+<body>	
+	<header>
+		<div class="container">
+			<div class="branding">
+				<h1><span class="light">Rck</span>SHOES</h1>
+			</div>
+
+			<nav>
+				<ul>
+					<li class="current"><a href="index.html">ACCUEIL</a></li>
+                    <li class="current"><a href="html/Enfants.html">ENFANT</a></li>
+					<li><a href="html/femmepage.html">FEMME</a></li>
+					<li><a href="html/NouveauteHomme.html">HOMME</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header><br>
+	<section id="showcase-slider">
+		<div class="container">
+			<div id="hero">
+
+				<div id="pager"></div>
+				<div id="next">&rang;</div>
+				<div id="prev">&lang;</div>
+
+				<div class="slider">
+
+					<div class="items">
+						<img src="img/2.jpg" height="750px" width="1100px">
+						<div class="info">
+							<h2>Meilleurs Chaussures </h2>
+							<p>les plus grande marques sont ici venez les chercher <a href="">ici</a></p>
+						</div>
+					</div>
+
+					<div class="items">
+						<img src="img/5.jpg" height="750px" width="1100px">
+						<div class="info">
+							<h2>Les derniers mocassins</h2>
+							<p>Nous en avons de toutes les couleurs et modeles <a href="">ici</a></p>
+						</div>
+					</div>
+
+					<div class="items">
+						<img src="img/1.jpg" height="750px" width="1100px">
+						<div class="info">
+							<h2>Baskets</h2>
+							<p>Des baskets de toutes les marques <a href="">learn more</a></p>
+						</div>
+					</div>
+
+					<div class="items">
+						<img src="img/15.jpg" height="750px" width="1100px">
+						<div class="info">
+							<h2>Chaussures de sport </h2>
+							<p>Venez chercher vos chaussures ici, il y'en a de toute couleur <a href="">ici</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="newsletter">
+		<div class="container">
+			<h1>Souscrivez a notre Newsletter</h1>
+		<form>
+			<input type="email" placeholder="Entre votre email">
+			<button class="button_1" type="submit">SOUSCRIRE</button>
+		</form>
+		</div>	
+		
+	</section>
+
+	<section id="img-box">
+		<div class="container-img">
+			<ul>
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/adidasrose.jpg" height="400px" width="400px">
+						<a  href="page/register.html" ><p><b>Adidas Superstar Rose</b></p></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/frisal.jpg" height="400" width="400px">
+						<a href="page/register.html" ><p><b>Frisal Black</b></p></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/Santoni-PG.jpg"height="400px" width="400px">
+						<a  href="page/register.html" ><p><b>Santoni PG</b></p></a>
+					</div>
+				</li>
+
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/simulation american.jpg" height="400px" width="400px">
+						<a  href="page/register.html" ><p><b>Gamme de apple</b></p></a>
+					</div>
+				</li>
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/CHENGYANG.jpg" height="400px" width="400px">
+						<a href=""><p><b>Cheny Blanc</b></p></a>
+					</div>
+				</li>
+				<li>
+					
+
+				<li>
+					<div class="img-shower">
+						<img class="myimg" src="img/balerinapink.jpg" height="400px" width="400px">
+						<a  href="page/register.html" ><p><b>Tallon rose</b></p></a>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+	</section>
+	<footer>
+		<p>RckSHOES, Copyright &copy; 2017</p>
+	</footer>
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="js/cycle.js"></script>
+<script type="text/javascript">
+	 $('.slider').cycle({
+	 	fx:'scrollHorz',
+	 	next:'#next',
+	 	prev:'#prev',
+	 	pager:'#pager',
+	 	timeout:3000,
+	 	speed:900,
+	 	pause:1
+	 });
+	 $(function(){
+	 	$(".myimg").click(function(){
+	 		var img=$(this).attr('src');
+	 		var appear_img="<div id='appear_img_div' onClick='closeImage()'></div>";
+	 		appear_img=appear_img.concat("<img src='"+img+"'  id='appear_img'>");
+
+	 		$('body').append(appear_img);
+	 	})
+
+	 	
+	 })
+	 function closeImage(){
+	 		$("#appear_img").remove();
+	 		$("#appear_img_div").remove();
+	 	}
+
+	 
+</script>
+ </body>
+</html>
